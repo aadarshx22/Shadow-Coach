@@ -1,0 +1,26 @@
+{
+    "name": "shadowcoach",
+    "version": "1.0.0",
+    "private": true,
+    "description": "AI-Powered Draft Strategy for League of Legends",
+    "workspaces": [
+      "apps/*",
+      "packages/*"
+    ],
+    "scripts": {
+      "dev": "turbo run dev",
+      "build": "turbo run build",
+      "test": "turbo run test",
+      "lint": "turbo run lint",
+      "clean": "turbo run clean",
+      "backend:dev": "cd apps/backend && npm run dev",
+      "frontend:dev": "cd apps/frontend && npm run dev",
+      "setup": "npm install && npm run db:init && npm run seed",
+      "db:init": "cd apps/backend && npm run db:init",
+      "seed": "cd apps/backend && npm run seed"
+    },
+    "devDependencies": {
+      "turbo": "^1.11.2",
+      "@types/node": "^20.10.6"
+    }
+  }
